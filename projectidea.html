@@ -78,8 +78,14 @@
 										<p>This system can be used for e-bikes and e-scooters as well as mobility scooters. With the values of these items in thousands of dollars, it is a logical step to create this register. This process has truly global potential and is not restricted to the Australian market. Future additions that may be considered is to have a second-hand bicycle sales platform. Resembling carsales.com or bikesales.com.</p>
 									<h2>Tools and Technologies</h2>
 										<ul>
-											<li>Server – SQL Database  cPanel<ul><li>Well defined database structure that allows for remote hosting and allows for an established interface that can be remotely accessed and monitored</li></ul></li>
-											<li>Html editor – Atom<ul><li>This is a no cost solution to create the HTML interface to the database. The site design being primarily for use on mobile devices.</li></ul></li>
+											<li>Server – SQL Database  cPanel</li>
+												<ul>
+													<li>Well defined database structure that allows for remote hosting and allows for an established interface that can be remotely accessed and monitored</li>
+												</ul>
+											<li>Html editor – Atom</li>
+												<ul>
+													<li>This is a no cost solution to create the HTML interface to the database. The site design being primarily for use on mobile devices.</li>
+												</ul>
 											<li>Xcode – iOS compiler<ul><li>Used to generate the application for apple devices utilising Swift as the programming language.</li></ul></li>
 											<li>Android Studio – Android compiler<ul><li>Used for to generate the application for Android devices utilising Kotlin as the programming language.</li></ul></li>
 											<li>Github – code repository<ul><li>For the collaboration storage of all part of the code for all devices and platforms.</li></ul></li>
@@ -94,6 +100,88 @@
 										</ul>
 									<h2>Application functional workflow</h2>
 										<span class="image main"><img src="images/Project Flowchar.png" alt="" /></span>
+
+									<h2>Application functional outline and workflow</h2>
+										<p>The outcome of the application is to make the user experience as easy as possible without creating obstacles to discourage the continuation of the collection of information. This needs to be achieved in a way that still ensures the security of the user's information and maintain the overall database integrity.</p>
+											<h3>The start screen</h3>
+												<p>will guide <b>new users to a registration</b> screen to collect basic information including name and email address and desired password. An email will be sent back to that address to validate its authenticity. Once verified the user will reach the home screen. Alternatively, a registered user will be required to login with their username and password details. Device biometric security features of the individual devices such as facial recognition or fingerprint recognition can populate the login details to expedite the process.</p>
+											<h3>User Home Screen</h3>
+												<p>This is the main navigation page of the application and allows the user to navigate to their account's details/settings screen, they can also navigate item check status screen and items list screen. The user will have the following options</p>
+													<ul>
+														<li>Logout</li>
+														<li>Account Details/settings</li>
+														<li>Check item status</li>
+														<li>Receive new item </li>
+														<li>User Item list</li>
+													</ul>
+											<h3>Logout</h3>
+												<p>will secure the application manually and take the user back to the login screen. The application will automatically logout once the program has not been accessed for a period of 5 mins. This will be a setting within the account details/setup screen. The option will be 1 minute, 3 minutes 5 minutes, 15 minutes, 60 minutes and do not automatically log me out. </p>
+											<h3>Account details</h3>
+												<p>will have, in addition to the automatic logout options, additional personal details including the following fields not completed at initial registration. A reminder will pop up encouraging the completion of these fields once the first item is entered into the system.
+													<ul>
+														<li><h4>Additional details include</h4></li>
+															<ul>
+																<li>First Name</li>
+																<li>Last Name </li>
+																<li>Date of Birth </li>
+																<li>Current physical address</li>
+																<li>Profile picture</li>
+																<li>Contact phone number</li>
+															</ul>
+														<li><h4>Fields already completed</h4></li>
+															<ul>
+																<li>Email address</li>
+																<li>Password</li>
+															</ul>
+													</ul>
+												<p>The user can edit their personal account details on this screen from this screen. In keeping with the new account keeping requirements of the apple iOS platform there also needs to be an option to delete all user account details from the system. This feature will be made available at this screen.</p>
+											<h3>Term/Conditions and Legal information</h3>
+												<p>Will contain all the relevant legal information to be provided to the user regarding privacy policy and non-lability statements etc. This will be accessible from the start screen and the account details screen.</p>
+											<h3>Login</h3>
+												<p>once the account has been established then the user will be required to login to their account with their login name and password.</p>
+											<h3>Account Details/Settings</h3>
+												<p>this is the screen where they can edit their personal details, update their profile picture, modify their opt in settings, etc. as part of apples new policies there also needs to be an option to delete the user and remove all information from the system. This option will be made available on this screen. Navigation from this screen is back to the Home Screen.</p>
+											<h3>Items List</h3>
+												<p>This screen contains the list of items with a basic view of the item's description and status that the user currently has stored against their profile. Within the database, this is a second list containing all the items of all the users. Each item is linked to each user via an internally generated user ID key. This process simplifies the transfer of items to different users. (See Exchange user/Sale an item) From this screen a user can navigate to item details/status screen or add a new item screen.</p>
+											<h3>Item Detail/Status</h3>
+												<p>This screen shows the additional information of each item stored against the user's account. Additional information such as a more detailed description of the item, photo of the bike, serial number of the frame, proof of purchase, modifications, make, model, colour, place of purchase and its status. The status displayed will be predefined as either “current”, “for sale” or “stolen”. This page will also allow for the user to delete the item from the list. From this screen the user can navigate back to the Home Screen or to the edit item details screen. This item information can be supported with artefacts such as the purchase receipt, photo of the item, photo of modifications and modification receipts and/or photos of the user with the item. By having all these artefacts and information stored against the item, in a single place it makes supporting arguments of ownership indisputable. </p>
+											<h3>Edit Item Details</h3>
+												<p>This screen allows the user to modify/update/change any of the item specific details. From this screen the user will be able to access a variety of functions that include file access, scanner access, camera access and optical character recognition (OCR) to assist with the collection of information and artefacts of the item and to strengthen proof of ownership. The status of the item can also be changed at the screen. </p>
+											<h3>New Item</h3>
+												<p>Adding a new item to the list of items that is attached to the user's account.  Information recorded includes things such as detailed description of the item, photo of the item, serial number of the frame, proof of purchase, modifications, make, model, colour, place of purchase and its status from a selection of “current”, “for sale” or “stolen”. This screen also allows access to a variety of functions that include file access, scanner access, camera access and optical character recognition (OCR) to assist with the collection of information and artefacts of the item and to strengthen proof of ownership. The status of the item can also be changed at the screen. </p>
+											<h3>Exchange user/Sale an item</h3>
+												<p>If a user wishes to sell an item the from the edit item details screen the user changes the item status to “for sale”.  When this is done a screen with a for sale QR code is generated. This can be attached to any image from the user's photo library as a layer and the user can then post this picture of the item with the QR code layer to any sale platform or marketplace platform with the QR code layer attached. Any potential purchaser can then scan the QR code that is on the image, and it would link to item details so the potential purchaser will see that it is a legitimately advertised for sale item. When a transaction occurs a unique code and QR code is generated. The buyer will enter in the code or scan the QR code. The seller/user will acknowledge notification on their device to accept the transaction. The item and all the relevant data will then be transferred to the new owners account with a receipt of the transaction being left on both user's accounts as evidence of the legitimate transfer of the item. The transfer of the item on a technical level is changing the items host. All items when entered the system are independent of the host (user) and linked to the host with the host id number. When a transfer of item occurs the host id reference number is changed to the new host id. </p>
+											<h3>Check Item Status</h3>
+												<p>This screen is accessed via the User Home Screen. It provides the user with an area to enter in the item serial number. Alternatively, the OCR camera can be engaged to scan the serial number automatically. Once the unique number is entered into the system and varified by the user it can them scan the database for a matching item number. If the item is identified in the database, it will return the status of the item to the user presenting them with one of four possible options.</p>
+													<ul>
+														<li> <h4>Option 1. the item is registered as active.</h4> This is an indication the items details are registered on the system, but it is in normal use.</li>
+														<li> <h4>Option 2. the item is registered and is flagged for sale.</h4> This is an indication that the current registered user has the item set for sale and that it is a legitimate sale, and the user has all the relevant proof of owner ship information that can be transferred during a sales transaction. </li>
+														<li> <h4>Option 3. The item is registered and is flagged as stolen.</h4> This is an indication that the legitimate owner of this item has flagged it as a stolen item. The user will then be presented with a small list of questions regarding the location of the contact, contact details of the person trying to sell the item, where they found the item for sale, etc. This information will be sent as a notification to the legitimate owner of the item which they can then use by contacting police with their case ID </li>
+														<li> <h4>Option 4. The item is not registered on the system.</h4> This is an item that has not been registered on the system.</li>
+													</ul>
+											<h3>New Owner/Receiver of the goods</h3>
+												<p>Accessed through the for-sale item status screen or directly from the home screen. This allows the user to enter in the transfer code or scan the QR code provided by the seller to facilitate the transfer of the item to the user.  The transfer of the item on a technical level is changing the items host. All items when entered the system are independent of the host (user) and linked to the host with the host id number. When a transfer of item occurs the host id reference number is changed to the new host id.</p>
+										<h2>Commercial Opportunity</h2>
+											<p>An opportunity exists to use the platform to advertise to a specific demographic. Enhance this cohort with geo fencing feature and you have high level targeted market access. With banner advertisements on selected screens of the application, a potential marketer can access potential customers in their region with highly relevant material. This marketing can be outsourced to Google Ads that take the demographic information and control and advertisement content. Revenue is established by clicks and is paid by Google Ads.</p>
+										<h2>Skills Required</h2>
+											<ul>
+												<li>Skill required include have the programming knowledge for the following languages and software </li>
+												<li>Swift – used for the programming language for the iOS operating system </li>
+												<li>Kotlin – used for the programming language for the Android operating system </li>
+												<li>HTML – Used to build the front end of the web interface</li>
+												<li>PHP – Used for the backend of the web interface</li>
+												<li>SQL – Used to create the database</li>
+												<li>Adobe Photoshop – Graphic art components</li>
+												<li>Adobe Illustrator – Graphic art components</li>
+											</ul>
+										<h2>Outcome</h2>
+											<p>With this project completion there will be an international database for the storage and tracking of bicycles, e-bikes, e-scooters, and mobility scooters. This will act as a deterrent for the would-be criminal and give law enforcement a tool for tracking and tracing these items. This will decrease the amount of theft and increase the number of cases solved. </p>
+											<p>Additional benefits include the ease of access and security of documentation for insurance policies and claims and the registered pawn brokers can have security in ensuring a products legitimacy prior to any exchange occurring. </p>
+
+
+
+
+
 						</div>
 					</div>
 
